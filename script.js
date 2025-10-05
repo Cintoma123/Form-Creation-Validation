@@ -34,13 +34,13 @@ document.addEventListener('DOMContentLoaded', function() {
         feedbackDiv.style.display = 'block';
 
         if (!isValid) {
-            feedbackDiv.innerText = messages.join(' ');
-            feedbackDiv.style.color = '#D8000C'; // Error color from CSS
+            feedbackDiv.innerHTML = messages.join('<br>');
+            feedbackDiv.style.color = '#dc3545C'; // Error color from CSS
             feedbackDiv.style.backgroundColor = '#FFBABA'; // Error background from CSS
         } else {
-            feedbackDiv.innerText = 'Registration successful!';
-            feedbackDiv.style.color = 'green';
-            feedbackDiv.style.backgroundColor = '#DFF2BF'; // A suitable success background
+            feedbackDiv.textContent = 'Registration successful!';
+            feedbackDiv.style.color = '#28a745';
+            feedbackDiv.style.backgroundColor = '#d4edda'; // A suitable success background
         }
     });
 });
